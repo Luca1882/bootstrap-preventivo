@@ -1,0 +1,10 @@
+/*Creata @media per la responsive di Card*/
+.my-card{
+    width: 100%;
+}
+
+@media(min-width:1024px){
+    .my-card{
+        width: 25rem;
+    }
+}

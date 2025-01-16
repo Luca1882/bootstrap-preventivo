@@ -4,102 +4,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Bootstrap_Preventivo</title>
 </head>
+<title>Prova</title>
+</head>
+
+<!--Navbar Dark Toggler-->
 
 <body>
   <header>
-    <!--Creazione Navbar-->
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-md">
         <a class="navbar-brand text-light" href="#">Bool Factory</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active text-secondary" aria-current="page" href="#">Home</a>
-            <a class="nav-link text-secondary" href="#">Servizi</a>
-            <a class="nav-link text-secondary" href="#">Contatti</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Servizi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Contatti</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
   </header>
-  <!--Inizio del main con inserimento Form-->
-  <main class="container">
-    <div class="row mt-3">
-      <div class="col-12 col-md-6">
-        <h2>Richiesta Preventivo</h2>
-        <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
-      </div>
-      <form class="col-12 col-md-7">
-        <div class="mt-3">
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="input-nome">
+  <!--Creata classe container-->
+  <main>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <!--Richiesta preventivo più Form-->
+          <h1>Richiesta Preventivo</h1>
+          <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+          <form>
+            <div>
+              <div class="mt-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="input-nome">
+              </div>
+              <div class="mt-3">
+                <label for="cognome" class="form-label">Cognome</label>
+                <input type="text" class="form-control" id="input-cognome">
+              </div>
+              <div class="mt-3">
+                <label for="input-email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="input-email">
+              </div>
+              <div class="mt-3">
+                <label for="tipo-lavoro" class="form-label">Tipo di lavoro</label>
+                <select id="tipo-lavoro" class="form-select">
+                  <option>Seleziona tipo di lavoro</option>
+                  <option value="20,50">Back-end Development</option>
+                  <option value="15,30">Frontend Development</option>
+                  <option value="33,60">Project Analysis</option>
+                </select>
+              </div>
+              <div class="mt-3 ">
+                <label for="note" class="form-label">Note</label>
+                <textarea class="form-control" id="note"></textarea>
+              </div>
+              <div class="mt-3">
+                <label for="codice-promo" class="form-label">Codice Promozionale</label>
+                <input type="text" class="form-control" id="codice-promo">
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Accetto la privacy policy
+                </label>
+              </div>
+            </div>
+          </form>
+          <!--Submit & Prezzo finale Responsive-->
+          <div class="mt-5 mb-3 col-12 d-flex flex-column justify-content-center align-items-center flex-lg-row justify-content-lg-around">
+            <div class="d-flex justify-content-center align-items-center mb-2">
+              <button type="button" class="btn btn-primary">Calcola Preventivo</button>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-column">
+              <h5><strong>Prezzo Finale</strong></h5>
+              <p class="fs-3"><strong>€ 0</strong>,00</p>
+            </div>
+          </div>
         </div>
-        <div class="mt-3">
-          <label for="cognome" class="form-label">Cognome</label>
-          <input type="text" class="form-control" id="input-cognome">
-        </div>
-        <div class="mt-3">
-          <label for="input-email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="input-email">
-        </div>
-        <div class="mt-3">
-          <label for="tipo-lavoro" class="form-label">Tipo di lavoro</label>
-          <select id="tipo-lavoro" class="form-select">
-            <option>Seleziona tipo di lavoro</option>
-            <option value="20,50">Back-end Development</option>
-            <option value="15,30">Frontend Development</option>
-            <option value="33,60">Project Analysis</option>
-          </select>
-        </div>
-        <div class="mt-3 ">
-          <label for="note" class="form-label">Note</label>
-          <textarea class="form-control" id="note"></textarea>
-        </div>
-        <div class="mt-3">
-          <label for="codice-promo" class="form-label">Codice Promozionale</label>
-          <input type="text" class="form-control" id="codice-promo">
-        </div>
-        <div class="form-check mt-3">
-          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            Accetto la privacy policy
-          </label>
-        </div>
-      </form>
-      <!--Inizio della card delle Info-->
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-        </ul>
-      </div>
-    </div>
-    <!--Submit & Prezzo Finale-->
-    <div class="row text-center mt-5">
-      <div class="col-md-6 d-md-flex justify-content-around ">
-        <button type="button" class="btn btn-primary" id="calcola-Preventivo">Calcola Preventivo</button>
-        <div class="ms-1">
-          <h4 class="mb-0">Prezzo Finale:</h4>
-          <span id="prezzoFinale">€ 0,00</span>
+        <!--Card/Creato style @media per la responsive-->
+        <div class="container col-12 col-lg-4 mt-3">
+          <div class="card my-card">
+            <img src="https://placehold.co/300x200" class="card-img-top" alt="immagine">
+            <div class="card-body">
+              <h5 class="card-title">I nostri contatti</h5>
+              <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">help@boolfactory.test</li>
+              <li class="list-group-item">+1122334455</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Help Desk</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <script src="/js/script.js"></script>
+  <footer class="mt-5 bg-dark text-white text-center py-3">
+    <p>© 2025 Tutti i diritti riservati.</p>
+  </footer>
+  <script src="/script/script.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
