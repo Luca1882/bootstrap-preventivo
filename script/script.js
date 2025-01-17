@@ -22,4 +22,19 @@ document.querySelector(".calcolo-preventivo").addEventListener("click", function
     const oreLavoro = 10;
 
 
-  
+    // Controlla se è stato selezionato un tipo di lavoro valido
+  if (!tipoLavoro || tipoLavoro === "Seleziona tipo di lavoro") {
+    alert("Seleziona un tipo di lavoro valido.");
+    return;
+  };
+
+
+  //Formula prezzo per ora
+  const prezzoOrario = parseFloat(tipoLavoro.replace("," , ".")); // Converti il prezzo orario in numero
+  let prezzoFinale = prezzoOrario * oreLavoro;
+
+
+ 
+
+
+});
