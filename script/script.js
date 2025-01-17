@@ -34,7 +34,26 @@ document.querySelector(".calcolo-preventivo").addEventListener("click", function
   let prezzoFinale = prezzoOrario * oreLavoro;
 
 
- 
+  //Codici promozionali
+  const codiciValidi = [
+    "YHDNU32",
+    "JANJC63",
+    "PWKCN25",
+    "SJDPO96",
+    "POCIE24",
+];
+
+
+if(codiciValidi.includes(codicePromo)){
+    prezzoFinale *= 0.75;
+} else if (codicePromo){
+    alert("Il codice inserito non è valido ! Non ti verrà applicato nessuno sconto");
+};
+
+
+//Risultato
+
+prezzoOut.textContent = `€ ${prezzoFinale.toFixed(2)}`;
 
 
 });
