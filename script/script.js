@@ -11,7 +11,15 @@ document.querySelector(".calcolo-preventivo").addEventListener("click", function
     const prezzoOut = document.querySelector(".fs-3 strong"); //Aggiorna il prezzo
 
 
-    
+    //Contrllo dei campi form compilati
+    if(!nome || !cognome || !email || !tipoLavoro || !accettaPolicy ){
+        alert("Compila tutti i campi ");
+        return
+    }
 
 
-});
+    //Impostare le ore di lavoro
+    const oreLavoro = 10;
+
+
+  
