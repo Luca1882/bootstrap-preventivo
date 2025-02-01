@@ -1,5 +1,6 @@
 //Impedisco il comportamento predefinito del tasto "Calcolo Preventivo"
-document.querySelector(".calcolo-preventivo").addEventListener("click", function () {
+document.querySelector(".calcolo-preventivo").addEventListener("click", function (event) {
+  event.preventDefault();
     // Recupera i dati dal form
     const nome = document.querySelector("#input-nome").value;
     const cognome = document.querySelector("#input-cognome").value;
